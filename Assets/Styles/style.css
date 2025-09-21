@@ -11,7 +11,7 @@
 :root {
   --color1: #feffff;
   --color2: #252a2e;
-  --color3: #4998e8;
+  --color3: #2489ee;
 }
 
 body {
@@ -46,12 +46,13 @@ body {
   font-weight: normal;
   font-size: 0.8rem;
   letter-spacing: normal;
-  transition: 0.5s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .header-left button:hover {
   cursor: pointer;
   color: var(--color3);
+  transform: scale(1.2);
 }
 
 #banner {
@@ -94,12 +95,13 @@ body {
   font-weight: normal;
   font-size: 0.8rem;
   letter-spacing: normal;
-  transition: 0.5s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .first-main-container button:hover {
   cursor: pointer;
   color: var(--color3);
+  transform: scale(1.2);
 }
 
 #img-left {
@@ -135,12 +137,13 @@ body {
   font-size: 0.8rem;
   letter-spacing: normal;
   background-color: var(--color1);
-  transition: 0.5s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .after-main-container button:hover {
   cursor: pointer;
   color: var(--color3);
+  transform: scale(1.2);
 }
 
 .after-main-img {
@@ -221,12 +224,13 @@ form {
   font-weight: normal;
   font-size: 0.8rem;
   letter-spacing: normal;
-  transition: 0.5s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 #send:hover {
   cursor: pointer;
   color: var(--color3);
+  transform: scale(1.2);
 }
 
 label[for="name"] {
@@ -247,7 +251,7 @@ label[for="message"] {
 
 .end-dash {
   height: 1px;
-  width: 90%;
+  width: 100%;
   background-color: var(--color2);
   margin: 0 auto;
   opacity: 0.5;
@@ -260,18 +264,18 @@ footer {
 }
 
 ul {
-  display: grid;
-  grid-template-columns: 15% 15% 15% 15% 15%;
-  gap: 55px;
+  display: flex;
+  gap: 125px;
 }
 
 li {
   border: 1px solid var(--color2);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: grid;
-  place-items: center;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1rem;
   background-color: var(--color1);
   transition: transform 0.3s ease;
@@ -281,4 +285,80 @@ li:hover {
   cursor: pointer;
   color: var(--color3);
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 930px) {
+  .end-dash {
+    width: 70%;
+  }
+  ul {
+    gap: 50px;
+  }
+  li {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 783px) {
+  .header {
+    display: block;
+  }
+  .header-left {
+    padding: 30px 30px;
+  }
+  .first-main {
+    display: block;
+  }
+  .first-main-container {
+    padding: 30px 30px;
+  }
+  #img-left {
+    display: none;
+  }
+  .rd {
+    display: none;
+  }
+  .after-main {
+    display: block;
+  }
+  .after-main-container {
+    padding: 30px 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #name {
+    width: 180px;
+  }
+  #email {
+    width: 180px;
+  }
+  ul {
+    gap: 30px;
+  }
+  li {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  form {
+    column-gap: 5px;
+  }
+
+  #name {
+    width: 150px;
+  }
+  #email {
+    width: 150px;
+  }
+
+  #message {
+    width: 306px;
+  }
+  ul {
+    gap: 20px;
+  }
 }
